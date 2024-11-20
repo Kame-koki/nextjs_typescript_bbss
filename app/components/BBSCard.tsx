@@ -10,12 +10,14 @@ interface BBSDateProps{
 //{bbsData}はデータベースから取ってきたデータをmap関数で展開した中身
 //Cardはshadcnからインポートしたコンポーネント
 const BBSCard = ({bbsData}:BBSDateProps) => {
-  const {id,title,content,createAt,username} = bbsData;
+  const {id,title,content,username} = bbsData;
   return (
     <div>
         <Card>
         <CardHeader>
-            <CardTitle>{title}</CardTitle>
+            <CardTitle>
+              {title}
+              </CardTitle>
             <CardDescription>{username}</CardDescription>
         </CardHeader>
         <CardContent>
